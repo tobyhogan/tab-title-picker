@@ -3,8 +3,8 @@ import { useState, useEffect } from 'react'
 
 function App() {
   const [title, setTitle] = useState('')
+  const [isPressed, setIsPressed] = useState(false)
 
-  // Check local storage on initial load
   useEffect(() => {
     const savedTitle = localStorage.getItem('tabTitle')
     if (savedTitle) {
@@ -13,9 +13,15 @@ function App() {
     }
   }, [])
 
+  const showPressEffect = () => {
+    setIsPressed(true)
+    setTimeout(() => setIsPressed(false), 150)
+  }
+
   const handleUpdateTitle = () => {
     document.title = title
     localStorage.setItem('tabTitle', title)
+    showPressEffect()
   }
 
   const handleKeyPress = (e) => {
@@ -35,13 +41,18 @@ function App() {
             type="text"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
-            onKeyDown={handleKeyPress}
+            onKeyUp={handleKeyPress}
             placeholder="Enter new title"
             className="px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
           <button
             onClick={handleUpdateTitle}
-            className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className={`px-4 py-2 bg-blue-500 text-white rounded-lg 
+              relative top-0
+              transition-all duration-75
+              hover:bg-blue-600
+              active:top-1 active:bg-blue-700
+              ${isPressed ? 'top-1 bg-blue-700' : ''}`}
           >
             Update
           </button>
