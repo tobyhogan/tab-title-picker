@@ -1,0 +1,7 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="32" height="32" rx="6" fill="white"/>
+  <!-- Left bracket -->
+  <path d="M8 8 L14 8 L14 11 L11 11 L11 21 L14 21 L14 24 L8 24 L8 8" fill="black"/>
+  <!-- Right bracket -->
+  <path d="M24 8 L18 8 L18 11 L21 11 L21 21 L18 21 L18 24 L24 24 L24 8" fill="black"/>
+</svg> 
