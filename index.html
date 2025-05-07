@@ -1,13 +1,38 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tab Title Picker</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
-</html> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Tab Title</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input {
+            font-size: 18px;
+            padding: 10px;
+            width: 80%;
+            max-width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Change the Tab Title</h1>
+    <p>Type a new title below, and the tab title will change:</p>
+    <input type="text" id="titleInput" placeholder="Enter new title here" oninput="changeTabTitle()">
+    
+    <script>
+        // Function to change the title dynamically
+        function changeTabTitle() {
+            var newTitle = document.getElementById('titleInput').value;
+            if (newTitle) {
+                document.title = newTitle; // Change the browser tab title
+            } else {
+                document.title = 'Change Tab Title'; // Default title when input is empty
+            }
+        }
+    </script>
+</body>
+</html>
