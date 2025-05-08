@@ -6,25 +6,54 @@
     <title>Change Tab Title</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             text-align: center;
-            margin-top: 50px;
+            margin: 0;
+            padding: 0;
+            background: #fff;
+            color: #333;
         }
-        input, button {
-            font-size: 18px;
-            padding: 10px;
-            margin: 10px;
+        h1#pageTitle {
+            font-size: 2.5rem;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            text-shadow: none;
+        }
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
         }
         input {
+            font-size: 1rem;
+            padding: 10px;
+            margin: 10px 0;
             width: 80%;
             max-width: 400px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: none;
         }
         button {
+            font-size: 1rem;
+            padding: 10px 20px;
+            margin: 10px 0;
+            background-color: #28a745; /* Green color */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
             cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
         }
-        #pageTitle {
-            font-size: 36px;
-            margin-bottom: 20px;
+        button:hover {
+            background-color: #218838; /* Darker green on hover */
+            transform: translateY(-2px);
+        }
+        button:active {
+            transform: translateY(0);
+        }
+        input:focus {
+            outline: none;
+            border-color: #2575fc;
         }
     </style>
 </head>
@@ -41,7 +70,21 @@
             const newTitle = input || 'Change the Tab Title';
             document.title = newTitle;
             document.getElementById('pageTitle').textContent = newTitle;
+            localStorage.setItem('tabTitle', newTitle);
         }
+
+        document.getElementById('titleInput').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                changeTitle();
+            }
+        });
+
+        window.addEventListener('DOMContentLoaded', function() {
+            const savedTitle = localStorage.getItem('tabTitle') || 'Change the Tab Title';
+            document.title = savedTitle;
+            document.getElementById('pageTitle').textContent = savedTitle;
+            document.getElementById('titleInput').value = savedTitle;
+        });
     </script>
 </body>
 </html>
