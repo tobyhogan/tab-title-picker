@@ -117,6 +117,14 @@
         .quick-add-btn:hover {
             background-color: #5a6268;
         }
+        /* Reset button */
+        .reset-btn {
+            background-color: #007bff;
+            margin-left: 10px;
+        }
+        .reset-btn:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
@@ -143,6 +151,7 @@
     <input type="text" id="titleInput" placeholder="Enter new title here">
     <br>
     <button onclick="changeTitle()">Update Title</button>
+    <button class="reset-btn" onclick="resetTitle()">Reset</button>
 
     <!-- Quick add buttons -->
     <div class="quick-add-buttons">
@@ -168,6 +177,14 @@
             const newValue = currentValue ? currentValue + ' ' + text : text;
             input.value = newValue;
             input.focus();
+        }
+
+        function resetTitle() {
+            const defaultTitle = 'Change the Tab Title';
+            document.getElementById('titleInput').value = defaultTitle;
+            document.title = defaultTitle;
+            document.getElementById('pageTitle').textContent = defaultTitle;
+            localStorage.setItem('tabTitle', defaultTitle);
         }
 
         function toggleDarkMode() {
