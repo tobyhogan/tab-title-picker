@@ -151,14 +151,16 @@
     <input type="text" id="titleInput" placeholder="Enter new title here">
     <br>
     <button onclick="changeTitle()">Update Title</button>
-    <button class="reset-btn" onclick="resetTitle()">Reset</button>
+    <button class="reset-btn" onclick="clearInput()">Clear</button>
 
     <!-- Quick add buttons -->
     <div class="quick-add-buttons">
-        <button class="quick-add-btn" onclick="addText('working')">+ working</button>
-        <button class="quick-add-btn" onclick="addText('personal')">+ personal</button>
-        <button class="quick-add-btn" onclick="addText('1')">+ 1</button>
-        <button class="quick-add-btn" onclick="addText('2')">+ 2</button>
+        <h2>Quick Add Text: </h2>
+
+        <button class="quick-add-btn" onclick="addText('working')">"working"</button>
+        <button class="quick-add-btn" onclick="addText('personal')">"personal"</button>
+        <button class="quick-add-btn" onclick="addText('1')">" 1"</button>
+        <button class="quick-add-btn" onclick="addText('2')">" 2"</button>
     </div>
 
     <script>
@@ -179,12 +181,9 @@
             input.focus();
         }
 
-        function resetTitle() {
-            const defaultTitle = 'Change the Tab Title';
-            document.getElementById('titleInput').value = defaultTitle;
-            document.title = defaultTitle;
-            document.getElementById('pageTitle').textContent = defaultTitle;
-            localStorage.setItem('tabTitle', defaultTitle);
+        function clearInput() {
+            document.getElementById('titleInput').value = '';
+            document.getElementById('titleInput').focus();
         }
 
         function toggleDarkMode() {
