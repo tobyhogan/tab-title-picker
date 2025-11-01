@@ -130,16 +130,16 @@ function App() {
           <h2 className="w-full text-xl mb-2">Quick Add Text:</h2>
           
           <button
-            onClick={() => handleAddText('working')}
+            onClick={() => handleAddText('Working')}
             className="text-sm py-2 px-4 bg-[#6c757d] text-white border-none rounded-md cursor-pointer transition-all duration-300 hover:bg-[#5a6268] hover:-translate-y-0.5 active:translate-y-0"
           >
-            "working"
+            "Working"
           </button>
           <button
-            onClick={() => handleAddText('personal')}
+            onClick={() => handleAddText('Personal')}
             className="text-sm py-2 px-4 bg-[#6c757d] text-white border-none rounded-md cursor-pointer transition-all duration-300 hover:bg-[#5a6268] hover:-translate-y-0.5 active:translate-y-0"
           >
-            "personal"
+            "Personal"
           </button>
           <button
             onClick={() => handleAddText('1')}
