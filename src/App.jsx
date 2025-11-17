@@ -131,33 +131,58 @@ function App() {
         </div>
 
         {/* Quick add buttons */}
-        <div className="mt-4 flex flex-wrap justify-center gap-2 max-w-lg mx-auto">
-          <h2 className="w-full text-xl mb-2">Quick Add Text:</h2>
+        <div className="mt-4 max-w-lg mx-auto">
+          <h2 className="text-xl mb-4">Quick Add Text:</h2>
           
-          <button
-            onClick={() => handleAddText('Working')}
-            className="text-sm py-2 px-4 bg-[#6c757d] text-white border-none rounded-md cursor-pointer transition-all duration-300 hover:bg-[#5a6268] hover:-translate-y-0.5 active:translate-y-0"
-          >
-            "Working"
-          </button>
-          <button
-            onClick={() => handleAddText('Personal')}
-            className="text-sm py-2 px-4 bg-[#6c757d] text-white border-none rounded-md cursor-pointer transition-all duration-300 hover:bg-[#5a6268] hover:-translate-y-0.5 active:translate-y-0"
-          >
-            "Personal"
-          </button>
-          <button
-            onClick={() => handleAddText('1')}
-            className="text-sm py-2 px-4 bg-[#6c757d] text-white border-none rounded-md cursor-pointer transition-all duration-300 hover:bg-[#5a6268] hover:-translate-y-0.5 active:translate-y-0"
-          >
-            " 1"
-          </button>
-          <button
-            onClick={() => handleAddText('2')}
-            className="text-sm py-2 px-4 bg-[#6c757d] text-white border-none rounded-md cursor-pointer transition-all duration-300 hover:bg-[#5a6268] hover:-translate-y-0.5 active:translate-y-0"
-          >
-            " 2"
-          </button>
+          {/* Types category */}
+          <div className="mb-6">
+            <h3 className="text-lg mb-2 font-semibold">Types</h3>
+            <div className="flex flex-wrap justify-center gap-2">
+              <button
+                onClick={() => handleAddText('Working')}
+                className="text-sm py-2 px-4 bg-[#6c757d] text-white border-none rounded-md cursor-pointer transition-all duration-300 hover:bg-[#5a6268] hover:-translate-y-0.5 active:translate-y-0"
+              >
+                " Working "
+              </button>
+              <button
+                onClick={() => handleAddText('Personal')}
+                className="text-sm py-2 px-4 bg-[#6c757d] text-white border-none rounded-md cursor-pointer transition-all duration-300 hover:bg-[#5a6268] hover:-translate-y-0.5 active:translate-y-0"
+              >
+                " Personal "
+              </button>
+            </div>
+          </div>
+
+          {/* Numbers category */}
+          <div>
+            <h3 className="text-lg mb-2 font-semibold">Numbers</h3>
+            <div className="flex flex-wrap justify-center gap-2">
+              <button
+                onClick={() => handleAddText('1')}
+                className="text-sm py-2 px-4 bg-[#6c757d] text-white border-none rounded-md cursor-pointer transition-all duration-300 hover:bg-[#5a6268] hover:-translate-y-0.5 active:translate-y-0"
+              >
+                " 1 "
+              </button>
+              <button
+                onClick={() => handleAddText('2')}
+                className="text-sm py-2 px-4 bg-[#6c757d] text-white border-none rounded-md cursor-pointer transition-all duration-300 hover:bg-[#5a6268] hover:-translate-y-0.5 active:translate-y-0"
+              >
+                " 2 "
+              </button>
+              <button
+                onClick={() => handleAddText('3')}
+                className="text-sm py-2 px-4 bg-[#6c757d] text-white border-none rounded-md cursor-pointer transition-all duration-300 hover:bg-[#5a6268] hover:-translate-y-0.5 active:translate-y-0"
+              >
+                " 3 "
+              </button>
+              <button
+                onClick={() => handleAddText('4')}
+                className="text-sm py-2 px-4 bg-[#6c757d] text-white border-none rounded-md cursor-pointer transition-all duration-300 hover:bg-[#5a6268] hover:-translate-y-0.5 active:translate-y-0"
+              >
+                " 4 "
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
