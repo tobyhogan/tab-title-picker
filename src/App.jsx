@@ -7,7 +7,9 @@ function App() {
 
   // Load saved data on mount
   useEffect(() => {
-    const savedTitle = localStorage.getItem('tabTitle') || 'Change the Tab Title'
+    // Get title from URL path
+    const path = window.location.pathname.slice(1) // Remove leading slash
+    const savedTitle = path ? decodeURIComponent(path) : 'Change the Tab Title'
     const savedDarkMode = localStorage.getItem('darkMode') === 'enabled'
     
     setTitle(savedTitle)
@@ -29,7 +31,10 @@ function App() {
     const newTitle = title || 'Change the Tab Title'
     setPageTitle(newTitle)
     document.title = newTitle
-    localStorage.setItem('tabTitle', newTitle)
+    
+    // Update URL with encoded title
+    const encodedTitle = encodeURIComponent(newTitle)
+    window.history.pushState({}, '', `/${encodedTitle}`)
   }
 
   const handleClearInput = () => {
