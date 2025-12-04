@@ -150,6 +150,12 @@ function App() {
               >
                 " Personal "
               </button>
+              <button
+                onClick={() => handleAddText('Consulting')}
+                className="text-sm py-2 px-4 bg-[#6c757d] text-white border-none rounded-md cursor-pointer transition-all duration-300 hover:bg-[#5a6268] hover:-translate-y-0.5 active:translate-y-0"
+              >
+                " Consulting "
+              </button>
             </div>
           </div>
 
