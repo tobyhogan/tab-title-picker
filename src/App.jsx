@@ -74,7 +74,7 @@ function App() {
           viewBox="0 0 24 24"
           stroke="currentColor"
         >
-          
+
           <circle cx="12" cy="12" r="5" strokeWidth="2"/>
           <line x1="12" y1="1" x2="12" y2="3" strokeWidth="2"/>
           <line x1="12" y1="21" x2="12" y2="23" strokeWidth="2"/>
@@ -122,7 +122,7 @@ function App() {
             onClick={handleUpdateTitle}
             className="
 
-              text-base py-2.5 px-5 my-2.5 bg-[#3c9e53] hover:bg-[#3f9152ff] text-white border-none rounded-md
+              text-base py-2.5 px-5 my-2.5 bg-[#3c9e53] hover:bg-[#3f9152] text-white border-none rounded-md
               cursor-pointer
 
             ">
@@ -136,7 +136,7 @@ function App() {
             className="
 
 
-              text-base py-2.5 px-5 my-2.5 ml-2.5 bg-[#3984d4] hover:bg-[#3b76b4ff] text-white border-none rounded-md
+              text-base py-2.5 px-5 my-2.5 ml-2.5 bg-[#3984d4] hover:bg-[#3b76b4] text-white border-none rounded-md
               cursor-pointer transition-all
                
                
