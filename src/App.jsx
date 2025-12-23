@@ -118,17 +118,29 @@ function App() {
         <div className="mt-2.5">
           <button
             onClick={handleUpdateTitle}
-            className="text-base py-2.5 px-5 my-2.5 bg-[#28a745] text-white border-none rounded-md cursor-pointer transition-all duration-300 hover:bg-[#218838] hover:-translate-y-0.5 active:translate-y-0"
-          >
+            className="
+
+              text-base py-2.5 px-5 my-2.5 bg-[#3c9e53] hover:bg-[#3f9152ff] text-white border-none rounded-md
+              cursor-pointer
+
+            ">
+
             Update Title
+
+
           </button>
           <button
             onClick={handleClearInput}
-            className="text-base py-2.5 px-5 my-2.5 ml-2.5 bg-[#007bff] text-white border-none rounded-md cursor-pointer transition-all duration-300 hover:bg-[#0056b3] hover:-translate-y-0.5 active:translate-y-0"
-          >
+            className="
+              text-base py-2.5 px-5 my-2.5 ml-2.5 bg-[#3984d4] hover:bg-[#3b76b4ff] text-white border-none rounded-md
+              cursor-pointer transition-all
+               
+               
+            ">
             Clear
           </button>
         </div>
+
 
 
 
