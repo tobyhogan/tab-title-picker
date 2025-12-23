@@ -138,7 +138,7 @@ function App() {
 
           [&_button]:text-sm [&_button]:py-2 [&_button]:px-4 
           
-          [&_button]:bg-[#5a6268] hover:[&_button]:bg-[#70787d] 
+          [&_button]:bg-[#5a6268] hover:[&_button]:bg-[#70767c] 
 
           [&_button]:text-white [&_button]:border-none [&_button]:rounded-md [&_button]:cursor-pointer
 
